@@ -1,0 +1,62 @@
+body{
+    padding: 5px;
+    margin: 0;
+}
+#multidraggable{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+    height: calc(100vh - 10px);
+}
+#multidraggable li{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+}
+.red{
+    background-color: red;
+    top:130px;
+    left: 200px;
+}
+.blue{
+    background-color: blue;
+    top:180px;
+    left: 56px;
+}
+.orange{
+    background-color: orange;
+    top: 80px;
+    left: 100px;
+}
+#multidraggable-advance{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+    height: calc(100vh - 300px);
+    position: relative;
+    width: 700px;
+    border: 2px solid silver;
+    margin: 0 auto;
+}
+#multidraggable-advance li{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+}
+.actions{
+    margin-bottom: 100px;
+}

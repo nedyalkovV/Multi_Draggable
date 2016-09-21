@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Multidraggable Basic</title>
+        <link rel="stylesheet" href="dependencies/jquery-ui.css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+        <script src="dependencies/jquery-3.1.0.js" charset="utf-8"></script>
+        <script src="dependencies/jquery-ui.js" charset="utf-8"></script>
+        <script src="multidraggable.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <ul class="actions">
+            <li>Selecting State : <span id='selectingState'></span></li>
+            <li>Multidragging State : <span id='multidragingState'></span></li>
+            <li>Elements : <span id='multidragingElements'></span></li>
+        </ul>
+        <ul id="multidraggable-advance">
+            <li class="red">Red</li>
+            <li class="blue">Blue</li>
+            <li class="orange">Orange</li>
+        </ul>
+        <script type="text/javascript">
+            $('#multidraggable-advance').multidraggable({
+                containment:'#multidraggable-advance',
+                onCreate:(event, ui)=>{
+                    $('#selectingState').text('created');
+                    $('#multidragingState').text('created');
+                },
+                onSelecting:(event, ui)=>{
+                    $('#selectingState').text('selecting');
+                },
+                onSelected:(event, ui)=>{
+                    $('#selectingState').text('selected');
+                },
+                onStopSelecting:(event, ui)=>{
+                    $('#selectingState').text('stop');
+                },
+                onStartSelecting:(event, ui)=>{
+                    $('#selectingState').text('start');
+                },
+                onUnselected:(event, ui)=>{
+                    $('#selectingState').text('unselected');
+                },
+                onUnselecting:(event, ui)=>{
+                    $('#selectingState').text('unselecting');
+                },
+                onStartDrag:(event, ui, elements)=>{
+                    $('#multidragingState').text('start');
+                },
+                onDrag:(event, ui, elements)=>{
+                    $('#multidragingElements').text(elements.map((el)=>{
+                        return $(el).text();
+                    }).join(', '));
+                },
+                onStopDrag:(event, ui, elements)=>{
+                    $('#multidragingState').text('stop');
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "multidraggable",
+  "version": "1.0.0",
+  "description": "JQuery multidraggable and selectable extention/lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nedyalkovV/Multi_Draggable.git"
+  },
+  "keywords": [
+    "JQuery",
+    "UI",
+    "Multidraggable",
+    "Selectable"
+  ],
+  "author": "Vasil Nedyalkov (vin)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nedyalkovV/Multi_Draggable/issues"
+  },
+  "homepage": "https://github.com/nedyalkovV/Multi_Draggable#readme"
+}
