@@ -101,3 +101,20 @@ $('#multidraggable-advance').multidraggable({
   onStopDrag:(event, ui, elements)=>{}
 });
 ```
+##Options
+
+Other options except methods remains the same as JQuery UI Documentation such as:
+
+>containment:'div'
+
+>grid:[20,20]
+
+>etc...
+
+##Destroy
+
+>$('#multidraggable').multidraggable('destroy');
+
+##License
+
+Multidraggable is released under the **MIT License**. Have at it.
