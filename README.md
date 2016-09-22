@@ -21,7 +21,7 @@ OR
 <script src="multidraggable.js" charset="utf-8"></script>
 ```
 
-## STRUCTURE
+## Structure
 
 ####HTML
 ```
@@ -34,5 +34,29 @@ OR
 
 ####JS
 ```
-$('#multidraggable').multidraggable();
+$('#multidraggable').multidraggable([options]);
 ```
+options - type:*object* [optional]
+
+##Methods
+> onCreate(event, ui)
+triggers on initialize multidraggable
+
+> onSelecting(event, ui)
+triggers on selecting any of elements inside container
+
+> onSelected(event, ui)
+triggers when element is selected
+
+> onStopSelecting(event, ui)
+triggers when selecting stop no matter if element is selected or not
+
+> onStartSelecting(event, ui)
+triggers when selecting start
+
+> onUnselected(event, ui)
+triggers when element is unselected
+
+> onUnselecting(event, ui)
+triggers while unselecting elements
+
