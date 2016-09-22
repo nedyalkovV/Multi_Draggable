@@ -40,23 +40,64 @@ options - type:*object* [optional]
 
 ##Methods
 > onCreate(event, ui)
-triggers on initialize multidraggable
+
+ triggers on initialize multidraggable
 
 > onSelecting(event, ui)
+
 triggers on selecting any of elements inside container
 
 > onSelected(event, ui)
+
 triggers when element is selected
 
 > onStopSelecting(event, ui)
+
 triggers when selecting stop no matter if element is selected or not
 
 > onStartSelecting(event, ui)
+
 triggers when selecting start
 
 > onUnselected(event, ui)
+
 triggers when element is unselected
 
 > onUnselecting(event, ui)
+
 triggers while unselecting elements
 
+> onStartDrag(event, ui, elements)
+
+triggers when dragging start
+
+> onDrag(event, ui, elements)
+
+triggers while dragging elements
+
+> onStopDrag(event, ui, elements)
+
+triggers when dragging ends
+
+```
+event - starndart jquery event
+ui - standart jquery ui
+elements - array of html elements
+```
+
+#### Example
+```
+$('#multidraggable-advance').multidraggable({
+  containment:'#multidraggable',
+  onCreate:(event, ui)=>{},
+  onSelecting:(event, ui)=>{},
+  onSelected:(event, ui)=>{},
+  onStopSelecting:(event, ui)=>{},
+  onStartSelecting:(event, ui)=>{},
+  onUnselected:(event, ui)=>{},
+  onUnselecting:(event, ui)=>{},
+  onStartDrag:(event, ui, elements)=>{},
+  onDrag:(event, ui, elements)=>{},
+  onStopDrag:(event, ui, elements)=>{}
+});
+```
