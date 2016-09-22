@@ -115,6 +115,9 @@ Other options except methods remains the same as JQuery UI Documentation such as
 
 >$('#multidraggable').multidraggable('destroy');
 
+##Demo
+Demo examples are located in demo directory
+
 ##License
 
 Multidraggable is released under the **MIT License**. Have at it.
